@@ -41,7 +41,10 @@ public class Palavra {
 		}
 		return true;
 	}
-	
+	/*
+	 * Overriding toString() method to make it print correctly
+	 * Override método toString() para imprimir corretamente
+	 */
 	@Override 
 	public String toString(){
 		String pal = "";
