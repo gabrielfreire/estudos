@@ -1,5 +1,6 @@
 package com.gabriel.estudos;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -22,20 +23,17 @@ public class Dados {
 		//Recebe o valor do usuário e checa se o mesmo digitou um número inteiro
 		try{
 			Integer palpite = scan.nextInt();
-			if(palpite instanceof Integer){
-				if(palpite > 6){
-					System.out.println("O dado só possui valores até 6!");
-					
-				}else if(numDoDado == palpite){
-					System.out.println("Parabéns, você acertou! o número do dado foi: " + numDoDado);
-				}else{
-					System.out.println("Você errou! O número foi: " + numDoDado);
-				}
-				
+
+			if(palpite > 6){
+				System.out.println("O dado só possui valores até 6!");		
+			}else if(numDoDado == palpite){
+				System.out.println("Parabéns, você acertou! o número do dado foi: " + numDoDado);
+			}else{
+				System.out.println("Você errou! O número foi: " + numDoDado);
 			}
 			
-		}catch(Exception e){ //lança uma exceção caso o usuário não digitar um número inteiro
-			throw new Exception("Você não digitou um número! Por favor, digite um número inteiro!");
+		}catch(InputMismatchException e){ //lança uma exceção caso o usuário não digitar um número inteiro
+			System.out.println("Você não digitou um número! Por favor, digite um número inteiro! A \nExceção foi: " + e);
 			
 		}
 	}
