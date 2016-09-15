@@ -12,7 +12,13 @@ public class Excecoes {
 		int y = getInt();
 		int result= 999;
 		//treating an Unchecked exception
+		/*
+		 * Unchecked exceptions are exceptions that we don't need to treat because they are unexpected RuntimeExceptions
+		 * Checked exceptions are exceptions that we need to treat because they are expected and ugly, so we have to show nice error messages
+		 * Throwables are the same as Errors
+		 */
 		try{
+			
 			result = x / y;
 			System.out.println(result);
 		}catch(ArithmeticException e){
