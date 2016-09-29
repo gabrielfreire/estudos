@@ -35,9 +35,21 @@ public class Teste{
 		while(m.find()){
 			System.out.print(m.start() + ": " + m.group() + " ");
 		}
+		int i;
+
+		for(i = 0; i < 5; i++){
+			if(i++ % 3 == 0){
+				break;
+			}
+		}
+		System.out.println(i);
+		//infinity
+		System.out.println(1.0 / 0);
 		
+		String s1 = new String("s1");
+		String s2 = s1.substring(0,2);
+		System.out.println(s1.equals(s2)); //true
 		
-	
 	
 	}
 }
